@@ -8,7 +8,7 @@ an out of box richtext editor base on slate
 # usage
 
 ```
-import LightingEditor from 'lighting-editor'
+import { LightingEditor } from 'lighting-editor'
 
 function MyEditor() {
     return (

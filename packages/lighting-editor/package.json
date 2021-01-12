@@ -8,6 +8,7 @@
     "wysiwyg",
     "richtext"
   ],
+  "repository": "https://github.com/guotie/lighting-editor.git",
   "author": "guotie <guotie.9@gmail.com>",
   "homepage": "https://github.com/guotie/lighting-editor",
   "license": "MIT",
