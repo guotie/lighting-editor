@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.slate-editor {
+  font-size: 14px;
+  text-align: left;
+  [data-slate-toolbar="true"] {
+    & > * {
+      display: inline-block;
+    }
+    & > * + * {
+      margin-left: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    position: relative;
+    padding: 5px 2px ;
+    // margin: 0;
+    // border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    font-size: 14px; // 0.6rem;
+    background: #fcfcfc;
+    // border-bottom: 1px solid #e8e8e8;
+    transition: all 0.25s cubic-bezier(0.3, 1.2, 0.2, 1);
+  }
+
+  [data-slate-editor="true"] {
+    padding: 1em;
+    border: 1px solid #e8e8e8;
+    min-height: 360px;
+  }
+  [data-slate-node="element"] {
+      margin-top: 1em;
+  }
+  ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  blockquote {
+    border-left: 2px solid #ddd;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    color: #aaa;
+    font-style: italic;
+  }
+}
+
+.App-header {
+  background-color: #fff;
+  padding-top: 10vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: #000;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "lighting-editor",
+  "version": "0.0.1",
+  "description": "an out of box richtext editor base on slate",
+  "keywords": [
+    "editor",
+    "slate",
+    "wysiwyg",
+    "richtext"
+  ],
+  "author": "guotie <guotie.9@gmail.com>",
+  "homepage": "https://github.com/guotie/lighting-editor",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/lighting-editor.js",
+  "jsdelivr": "dist/lighting-editor.js",
+  "directories": {
+    "lib": "lib",
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build:esm": "tsc --module esnext --target es2015 --outDir ./es",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir ./lib",
+    "build:umd": "rollup -c",
+    "build:dev": "run-p build:cjs build:esm",
+    "build:watch": "yarn build:esm --w",
+    "build:watch:esm": "yarn build:esm --w",
+    "build:watch:cjs": "yarn build:cjs --w",
+    "build": "run-p build:dev build:umd"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
+}
